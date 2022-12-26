@@ -1,0 +1,10 @@
+footer{
+    background-color: rgb(232, 111, 64);
+    font-size: 20px;
+    padding: 10px;
+}   
+h5{
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
