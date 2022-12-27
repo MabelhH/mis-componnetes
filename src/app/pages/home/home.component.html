@@ -7,4 +7,6 @@
 </button>
 
 <hr>
-<app-barra></app-barra>
+<app-barra [nombrebarra]="nombre" (cambiarNombrebarra)="nombre=$event" ></app-barra>
+
+

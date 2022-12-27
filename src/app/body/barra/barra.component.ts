@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-barra',
@@ -6,10 +6,19 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./barra.component.css']
 })
 export class BarraComponent  implements OnInit {
-  
+   
+
+  @Input() nombrebarra:string='sin nombre'
+  @Output() cambiarNombrebarra = new EventEmitter<string>();
+
+
   constructor(){}
-  ngOnInit() {
-    
+
+  ngOnInit() {  
+  }
+  cambiarNombre(){
+    this.nombrebarra ="juan lechuga";
+    this.cambiarNombrebarra.emit(this.nombrebarra);
   }
 
  }
